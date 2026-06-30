@@ -1,0 +1,37 @@
+# ── Phase 1: Geometry automation ───────────────────────────────────────────
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+scipy>=1.12          # useful for spline blade profile generation
+
+# ── Phase 2: FEA automation ─────────────────────────────────────────────────
+ansys-mapdl-core>=0.68      # PyANSYS — controls ANSYS Mechanical via Python
+# ansys-mechanical-core      # alternative if you use ANSYS Mechanical (not MAPDL)
+
+# ── Phase 3: ML surrogate ───────────────────────────────────────────────────
+scikit-learn>=1.4
+xgboost>=2.0
+torch>=2.2                  # install CPU version first; GPU later if needed
+torch-geometric>=2.5        # GNN surrogate (install after torch)
+# note: torch-geometric needs separate install steps — see docs below
+
+# ── Phase 4: Optimization ───────────────────────────────────────────────────
+pymoo>=0.6                  # NSGA-II and multi-objective optimization
+optuna>=3.6                 # Bayesian optimization (alternative/complementary)
+
+# ── Utilities ───────────────────────────────────────────────────────────────
+tqdm>=4.66          # progress bars for long loops
+joblib>=1.4         # parallel job execution
+seaborn>=0.13       # publication-quality plots
+plotly>=5.20        # interactive 3D Pareto front visualization
+jupyter>=1.0        # Jupyter notebooks for exploration
+ipykernel>=6.29
+
+# ── NOTE on torch-geometric ──────────────────────────────────────────────────
+# Do NOT install torch-geometric via this requirements.txt alone.
+# After pip install torch, run:
+#   pip install torch-scatter torch-sparse torch-cluster torch-spline-conv
+#   pip install torch-geometric
+# using the wheels matching your torch version from:
+# https://data.pyg.org/whl/
+# This is needed for the GNN surrogate in Phase 3.
