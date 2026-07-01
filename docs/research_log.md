@@ -46,11 +46,20 @@ Build first parametric blade Notebook in nTop (Phase 1).
 
 ## Phase 1 — Parametric Blade Generator (nTop)
 
-### DATE - Short title of what was done
-**Time spent:** X hours
-**What I did:**
-**What worked:**
+### 01/07/2026 - added parameters on ntop
+**Time spent:** 2 hrs
+**What I did:I manually added all blade parameters (simple  general shape) to the first (blade_v1) notebook on ntop
+
+
+**What worked:** opened notebok on ntop, then on create, pressed ctrl + L and searshed scalar variable, then added the 5 variables
+NameValueBladeWidth60BladeThickness8CurvatureHeight120CurvatureOffset80
+<img width="1289" height="1022" alt="image" src="https://github.com/user-attachments/assets/36663cb9-effa-4786-b9ba-0f3e5a1e571c" />
+
+
+
 **What didn't work:**
+
+
 **Next step:**
 ---
 
